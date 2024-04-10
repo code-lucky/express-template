@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express EJS Example</title>
+</head>
+
+<body>
+    {{data[0].name}}
+    {{each data}}
+        <p>{{$index}} - {{$value.name}}</p>
+    {{/each}}
+</body>
+
+</html>
