@@ -21,7 +21,7 @@ exports.login = async (req, res, next) => {
 // 更新用户
 exports.index = async (req, res, next) => {
     try{
-        res.send('post /users/updateUser')
+        res.send({data:"Header"})
     } catch (err) {
         next(err)
     }

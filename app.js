@@ -26,13 +26,9 @@ app.use(express.urlencoded())
 app.use(cors())
 
 // 挂载路由
-app.use('/test', router)
+app.use('/', router)
 
-// 挂载路由
-app.get('/index', (req, res) => {
-    const data = [{ name: 'hqh1', val: 1 }, { name: 'hqh2', val: 2 }, { name: "hqh3", val: 3 }]
-    res.render('index', { data: data })
-})
+
 
 // 处理全局错误
 app.use(errorHandler)
