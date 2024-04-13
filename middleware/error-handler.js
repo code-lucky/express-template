@@ -1,9 +1,11 @@
 const util = require('util')
 
-module.exports = () => {
-    return(err, req, res, next) => {
+module.exports = (err, req, res, next) => {
+    if (err.status == 404) {
+        res.render('404/404')
+    } else {
         res.status(500).json({
-            error:util.format(err)
+            error: util.format(err)
         })
     }
 }

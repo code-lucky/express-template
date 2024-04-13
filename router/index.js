@@ -10,4 +10,8 @@ router.get('/index', (req, res) => {
     res.render('index', { data: data })
 })
 
+router.get('/', (req, res) => {
+    res.render('index')
+})
+
 module.exports = router
