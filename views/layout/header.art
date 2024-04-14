@@ -4,23 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="layui/css/layui.css" rel="stylesheet">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="request.js"></script>
-
-    <script>
-        // 页面加载完成后发送 AJAX 请求
-        $(function () {
-            getRequest('/test/index', { name: 'hqh' }, (data) => {
-                console.log('data.....', data)
-            })
-
-        });
-    </script>
+    <script src="layui/layui.js"></script>
     <title>Header</title>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        {{headerData}}
+    </div>
 </body>
 
 </html>
